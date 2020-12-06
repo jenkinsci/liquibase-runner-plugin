@@ -73,7 +73,7 @@ Note that individual configuration values will override any found in a defined l
 [[LiquibaseRunner-Evaluateliquibasechangesetsstep]]
 == Evaluate liquibase changesets step
 
-Creating a job with this build step will run liquibase's update on the target database.&nbsp; Alternatively, by checking "Test Rollbacks", liquibase's updateTestingRollbacks is executed.  ; Once a build has executed, details are provided about each changeset on the build summary.
+Creating a job with this build step will run liquibase's update on the target database.&nbsp; Alternatively, by checking "Test Rollbacks", liquibase's updateTestingRollbacks is executed.  Once a build has executed, details are provided about each changeset on the build summary.
 
 [[LiquibaseRunner-Rollbackliquibasechangesstep]]
 == Rollback liquibase changes step
@@ -107,3 +107,12 @@ how to use the JobDSL plugin to generate liquibase projects.
 * If you'd like to have only new changesets evaluated, consider using an H2 JDBC url like +
 "jdbc:h2:file:./data/sample". This instructs H2 to persist the database to a file. Note, however, if a different +
 build agent runs your project, that file will no longer be available, and all changesets will again be executed.
+
+[[Plugin_changelog]]
+== Plugin changelog
+
+* link:/CHANGELOG.md[CHANGELOG]
+
+[[License]]
+== License
+* https://opensource.org/licenses/mit-license.php[MIT License]
