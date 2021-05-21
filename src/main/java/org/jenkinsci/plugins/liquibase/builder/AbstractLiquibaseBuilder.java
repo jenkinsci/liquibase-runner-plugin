@@ -124,7 +124,7 @@ public abstract class AbstractLiquibaseBuilder extends Builder implements Simple
         if (!Strings.isNullOrEmpty(installation.getDatabaseDriverUrl())) {
             Iterable<String> urls = Splitter.on(",").trimResults().split(installation.getDatabaseDriverUrl());
             for (String url : urls) {
-                String filename = url.substring(installation.getDatabaseDriverUrl().lastIndexOf("/") + 1);
+                String filename = url.substring(url.lastIndexOf("/") + 1);
                 File localJar = new File(installation.getHome(), "lib/" + filename);
                 if (!localJar.exists()) {
                     log.println("Downloading " + url + " to " + localJar);
